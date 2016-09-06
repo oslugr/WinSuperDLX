@@ -1,0 +1,11 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+LCID=0xc0a 0x0 0x0 ; Español (España)
+REPORT=Yes
+FTS=1
+COPYRIGHT=Antonio Jesús Contreras Sánchez, Mario David Barragán García y Emilio José Garnica López
+HLP=WinSuperDLX.hlp
+
+[FILES]
+Ayuda.rtf

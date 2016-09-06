@@ -1,0 +1,221 @@
+# ---------------------------------------------------------------------------
+!if !$d(BCB)
+BCB = $(MAKEDIR)\..
+!endif
+
+# ---------------------------------------------------------------------------
+# IDE SECTION
+# ---------------------------------------------------------------------------
+# The following section of the project makefile is managed by the BCB IDE.
+# It is recommended to use the IDE to change any of the values in this
+# section.
+# ---------------------------------------------------------------------------
+
+VERSION = BCB.04.04
+# ---------------------------------------------------------------------------
+PROJECT = Superdlx.exe
+OBJFILES = Superdlx.obj Unit1.obj Unit2.obj Unit3.obj asm.obj Getput.obj hash.obj \
+  inspect.obj Malltrap.obj Read.obj sim.obj strtrap.obj supercalc.obj \
+  superdecode.obj superfetch.obj Supersim.obj supertra.obj sym.obj trap.obj \
+  Unit4.obj configuracion.obj Unit5.obj FloatInstructionWindow.obj \
+  IntInstructionWindow.obj RBInt.obj LoadBuffer.obj StoreBuffer.obj \
+  InstructionQueue.obj GoToAddress.obj next.obj fichreg.obj estadisticas.obj \
+  ColaHistoria.obj Historia.obj branchform.obj branchpred.obj Legend.obj
+RESFILES = superdlx.res
+RESDEPEN = $(RESFILES) Unit1.dfm Unit2.dfm Unit3.dfm Unit4.dfm configuracion.dfm Unit5.dfm \
+  FloatInstructionWindow.dfm IntInstructionWindow.dfm RBInt.dfm LoadBuffer.dfm \
+  StoreBuffer.dfm InstructionQueue.dfm GoToAddress.dfm next.dfm fichreg.dfm \
+  estadisticas.dfm Historia.dfm branchform.dfm Legend.dfm
+LIBFILES = tcl.lib
+IDLGENFILES =
+IDLFILES =
+LIBRARIES = VCLX40.lib bcbsmp40.lib VCLJPG40.lib dclusr40.lib VCL40.lib
+SPARELIBS = VCL40.lib dclusr40.lib VCLJPG40.lib bcbsmp40.lib VCLX40.lib
+PACKAGES = VCL40.bpi VCLX40.bpi VCLJPG40.bpi VCLDB40.bpi
+DEFFILE =
+# ---------------------------------------------------------------------------
+PATHCPP = .;
+PATHPAS = .;
+PATHASM = .;
+PATHRC = .;
+DEBUGLIBPATH = $(BCB)\lib\debug
+RELEASELIBPATH = $(BCB)\lib\release
+USERDEFINES =
+SYSDEFINES = NO_STRICT
+# ---------------------------------------------------------------------------
+CFLAG1 = -I"..\..\..\Archivos de programa\Borland\CBuilder4\Projects";..\..\..\BC4\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl \
+  -O2 -Hc -H=$(BCB)\lib\vcl40.csm -w -Ve -a8 -5 -k- -vi -c -b- -w-par -w-inl -Vx \
+  -tW -tWM -D$(SYSDEFINES);$(USERDEFINES)
+IDLCFLAGS = -I"C:\Archivos de programa\Borland\CBuilder4\Projects" \
+  -I..\..\..\BC4\CBuilder4\Projects -I$(BCB)\include -I$(BCB)\include\vcl \
+  -src_suffixcpp
+PFLAGS = -U"..\..\..\Archivos de programa\Borland\CBuilder4\Projects";..\..\..\BC4\CBuilder4\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(RELEASELIBPATH) \
+  -I"..\..\..\Archivos de programa\Borland\CBuilder4\Projects";..\..\..\BC4\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl \
+  -$Y- -$L- -$D- -v -JPHNE -M
+RFLAGS = -i"..\..\..\Archivos de programa\Borland\CBuilder4\Projects";..\..\..\BC4\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl
+AFLAGS = /i"..\..\..\Archivos de programa\Borland\CBuilder4\Projects" \
+  /i..\..\..\BC4\CBuilder4\Projects /i$(BCB)\include /i$(BCB)\include\vcl /mx /w2 \
+  /zn
+LFLAGS = -L"..\..\..\Archivos de programa\Borland\CBuilder4\Projects";..\..\..\BC4\CBuilder4\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(RELEASELIBPATH) \
+  -H:0x300000 -Hc:0x10000 -S:0x300000 -Sc:0x10000 -aa -Tpe -s -Gn -M
+# ---------------------------------------------------------------------------
+ALLOBJ = c0w32.obj sysinit.obj $(OBJFILES)
+ALLRES = $(RESFILES)
+ALLLIB = $(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib
+# ---------------------------------------------------------------------------
+!ifdef IDEOPTIONS
+
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=0
+MinorVer=3
+Release=1
+Build=53
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=3082
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=0.3.1.53
+InternalName=WinSuperDLX
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=0.3B
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=5
+Item0=..\..\..\Archivos de programa\Borland\CBuilder4\Projects;..\..\..\BC4\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item1=C:\Archivos de programa\Borland\CBuilder4\Projects\;..\..\..\BC4\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item2=C:\Archivos de programa\Borland\CBuilder4\Projects;..\..\..\BC4\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item3=..\..\..\BC4\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item4=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=7
+Item0=..\..\..\Archivos de programa\Borland\CBuilder4\Projects;..\..\..\BC4\CBuilder4\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\Archivos de programa\Borland\CBuilder4\Projects\;..\..\..\BC4\CBuilder4\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=C:\Archivos de programa\Borland\CBuilder4\Projects;..\..\..\BC4\CBuilder4\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=..\..\..\BC4\CBuilder4\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item4=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item5=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\FACULTAD\proyecto\v2
+Item6=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;.
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+InMemoryExe=0
+ShowInfoMsgs=0
+
+!endif
+
+# ---------------------------------------------------------------------------
+# MAKE SECTION
+# ---------------------------------------------------------------------------
+# This section of the project file is not used by the BCB IDE.  It is for
+# the benefit of building from the command-line using the MAKE utility.
+# ---------------------------------------------------------------------------
+
+.autodepend
+# ---------------------------------------------------------------------------
+!if !$d(BCC32)
+BCC32 = bcc32
+!endif
+
+!if !$d(CPP32)
+CPP32 = cpp32
+!endif
+
+!if !$d(DCC32)
+DCC32 = dcc32
+!endif
+
+!if !$d(TASM32)
+TASM32 = tasm32
+!endif
+
+!if !$d(LINKER)
+LINKER = ilink32
+!endif
+
+!if !$d(BRCC32)
+BRCC32 = brcc32
+!endif
+
+!if !$d(IDL2CPP)
+IDL2CPP = idl2cpp
+!endif
+
+# ---------------------------------------------------------------------------
+!if $d(PATHCPP)
+.PATH.CPP = $(PATHCPP)
+.PATH.C   = $(PATHCPP)
+!endif
+
+!if $d(PATHPAS)
+.PATH.PAS = $(PATHPAS)
+!endif
+
+!if $d(PATHASM)
+.PATH.ASM = $(PATHASM)
+!endif
+
+!if $d(PATHRC)
+.PATH.RC  = $(PATHRC)
+!endif
+# ---------------------------------------------------------------------------
+$(PROJECT): $(IDLGENFILES) $(OBJFILES) $(RESDEPEN) $(DEFFILE)
+    $(BCB)\BIN\$(LINKER) @&&!
+    $(LFLAGS) +
+    $(ALLOBJ), +
+    $(PROJECT),, +
+    $(ALLLIB), +
+    $(DEFFILE), +
+    $(ALLRES)
+!
+# ---------------------------------------------------------------------------
+.pas.hpp:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.pas.obj:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.cpp.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) -n$(@D) {$< }
+
+.c.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) -n$(@D) {$< }
+
+.c.i:
+    $(BCB)\BIN\$(CPP32) $(CFLAG1) -n. {$< }
+
+.cpp.i:
+    $(BCB)\BIN\$(CPP32) $(CFLAG1) -n. {$< }
+
+.asm.obj:
+    $(BCB)\BIN\$(TASM32) $(AFLAGS) $<, $@
+
+.rc.res:
+    $(BCB)\BIN\$(BRCC32) $(RFLAGS) -fo$@ $<
+# ---------------------------------------------------------------------------

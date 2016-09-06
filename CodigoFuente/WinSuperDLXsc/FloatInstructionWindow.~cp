@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "FloatInstructionWindow.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "CTListBox"
+#pragma resource "*.dfm"
+TFormFloatInstructionWindow *FormFloatInstructionWindow;
+//---------------------------------------------------------------------------
+__fastcall TFormFloatInstructionWindow::TFormFloatInstructionWindow(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormFloatInstructionWindow::BtnCloseClick(TObject *Sender)
+{
+    this->Close();        
+}
+//---------------------------------------------------------------------------

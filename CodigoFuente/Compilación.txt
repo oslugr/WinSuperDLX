@@ -1,0 +1,27 @@
+COMPILACIÓN DEL PROYECTO "WINSUPERDLX"
+=================================================
+
+
+1º Instalar el componente "CTListBox" (en directorio "Componentes").
+___________________________________________________________________________
+
+
+   ** Componente probado para C++ Builder 4 Professional. **
+
+   * En el menú "Component", seleccionar "Install Component".
+   * Aparecerá un diálogo, en el que se eligirá para "Unit File Name" el fichero "CTListBox.cpp".
+    
+   * Se compila el paquete de usuario.
+   * Se instala.
+   * El componente aparecerá en la paleta "Samples".
+
+
+
+2º Compilar el proyecto (en directorio "WinSuperDLX"). 
+____________________________________________________________________________
+
+   * Seleccionar el archivo del proyecto: "SuperDLX.bpr".
+   * Seleccionar "Proyect --> Build SuperDLX".
+
+
+	

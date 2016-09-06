@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "InstructionQueue.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "CTListBox"
+#pragma resource "*.dfm"
+TFormInstructionQueue *FormInstructionQueue;
+//---------------------------------------------------------------------------
+__fastcall TFormInstructionQueue::TFormInstructionQueue(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormInstructionQueue::BitBtn1Click(TObject *Sender)
+{
+       Close();        
+}
+//---------------------------------------------------------------------------

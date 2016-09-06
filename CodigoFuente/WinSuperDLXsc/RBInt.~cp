@@ -1,0 +1,27 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "RBInt.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "CTListBox"
+#pragma resource "*.dfm"
+TFormRBInt *FormRBInt;
+//---------------------------------------------------------------------------
+__fastcall TFormRBInt::TFormRBInt(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormRBInt::BtnBackClick(TObject *Sender)
+{
+  Close();        
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormRBInt::BtnCloseClick(TObject *Sender)
+{
+  this->Close();        
+}
+//---------------------------------------------------------------------------

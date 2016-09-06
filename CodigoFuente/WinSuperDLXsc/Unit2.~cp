@@ -1,0 +1,32 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit2.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "CTListBox"
+#pragma resource "*.dfm"
+TFormFloatROB *FormFloatROB;
+//---------------------------------------------------------------------------
+__fastcall TFormFloatROB::TFormFloatROB(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormFloatROB::BtnBackClick(TObject *Sender)
+{
+   Close();        
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormFloatROB::FormCreate(TObject *Sender)
+{
+    // this->CTListRBFloat->anadir_color(0,clBlue);        
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormFloatROB::BitBtn1Click(TObject *Sender)
+{
+    Close();        
+}
+//---------------------------------------------------------------------------
+

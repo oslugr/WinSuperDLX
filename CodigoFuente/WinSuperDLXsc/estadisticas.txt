@@ -1,0 +1,69 @@
+Number of cycles: 3
+
+Instructions fetched	          12 
+Instructions decoded	           4 	(33.33% of total fetched)
+
+Instructions issued	           2 	(16.67% of total fetched)
+-> integers		           0	( 0.00% of total issued)
+-> floating points 	           2 	(100.00% of total issued)
+
+Instructions committed	           0 	( 0.00% of total fetched)
+
+Per Cycle Rates
+-> fetch 	4.00 instructions/cycle
+-> decode	1.33 instructions/cycle
+-> issue	0.67 instructions/cycle
+-> commit	0.00 instructions/cycle
+
+No branch instructions executed.
+
+Decode Stalls: 1 (33.33% of total cycle count)
+
+ **Operands Renaming (flow/anti-dependencies)
+
+Renamed operands:	 40.00%  of total operands
+-> integers		  0.00% of integer operands
+-> floats 		100.00% of floating point operands
+ _____________________________________________________________________________ 
+|     |      BOTH  UNITS      |      INTEGER UNIT     |  FLOATING POINT UNIT  |
+| NUM |     total    |    %   |     total    |    %   |     total    |    %   |
+|-----|--------------|--------|--------------|--------|--------------|--------|
+|   0 |            2 | 66.67% |            3 | 100.00% |            2 | 66.67% |
+|   2 |            1 | 33.33% |            0 |  0.00% |            1 | 33.33% |
+!-----!--------------!--------!--------------!--------!--------------!--------!
+("NUM": number of operands renamed ;"total": total number of clock cycles;
+ "%": percentage of clock cycles)
+
+**Operands Searching Information
+ _____________________________________________________________________________ 
+|     |      BOTH  UNITS      |      INTEGER UNIT     |  FLOATING POINT UNIT  |
+| NUM |     total    |    %   |     total    |    %   |     total    |    %   |
+|-----|--------------|--------|--------------|--------|--------------|--------|
+|   0 |            1 | 33.33% |            1 | 33.33% |            2 | 66.67% |
+|   1 |            0 |  0.00% |            1 | 33.33% |            0 |  0.00% |
+|   2 |            1 | 33.33% |            1 | 33.33% |            1 | 33.33% |
+|   3 |            1 | 33.33% |            0 |  0.00% |            0 |  0.00% |
+!-----!--------------!--------!--------------!--------!--------------!--------!
+("NUM": number of operands searched;"total": total number of clock cycles;
+ "%"	: percentage of clock cycles)
+
+**Instruction Issue Distribution
+ _____________________________________________________________________________ 
+|     |      BOTH  UNITS      |      INTEGER UNIT     |  FLOATING POINT UNIT  |
+| NUM |     total    |    %   |     total    |    %   |     total    |    %   |
+|-----|--------------|--------|--------------|--------|--------------|--------|
+|   0 |            2 | 66.67% |            3 | 100.00% |            2 | 66.67% |
+|   2 |            1 | 33.33% |            0 |  0.00% |            1 | 33.33% |
+!-----!--------------!--------!--------------!--------!--------------!--------!
+("NUM": number of instructions issued:"total": total number of clock cycles;
+ "%"	: percentage of clock cycles
+
+**Issue Delay Distribution
+ _____________________________________________________________________________ 
+|     |      BOTH  UNITS      |      INTEGER UNIT     |  FLOATING POINT UNIT  |
+| NUM |     total    |    %   |     total    |    %   |     total    |    %   |
+|-----|--------------|--------|--------------|--------|--------------|--------|
+|   1 |            2 | 100.00% |            0 |  0.00% |            2 | 100.00% |
+!-----!--------------!--------!--------------!--------!--------------!--------!
+("NUM": number of clock cycles;"total": total number of instructions;
+ "%": percentage of issued instructions)

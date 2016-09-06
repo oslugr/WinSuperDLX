@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "StoreBuffer.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "CTListBox"
+#pragma resource "*.dfm"
+TFormStoreBuffer *FormStoreBuffer;
+//---------------------------------------------------------------------------
+__fastcall TFormStoreBuffer::TFormStoreBuffer(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormStoreBuffer::BtnCloseClick(TObject *Sender)
+{
+     Close();        
+}
+//---------------------------------------------------------------------------
